@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
+import Navigation from './components/Navigation/Navigation';
+import { ModalProvider } from './hooks/useModalContext';
+import Home from './pages/Home/Home';
+import TokenProvider from './provider/TokenProvider';
+// import Routes from './route/routes'
 
-function App() {
+const App = () =>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  <TokenProvider>
+    <ModalProvider>
+      <BrowserRouter>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
+      <Navigation />
+    </ModalProvider>
+  </TokenProvider>
+  )
 }
 
 export default App;

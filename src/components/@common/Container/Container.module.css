@@ -1,0 +1,47 @@
+.box {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 420px;
+    padding: 2rem 1.25rem;
+    background: var(--black-001);
+  }
+  
+  .narrow {
+    width: var(--pc-main-width-narrow);
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .title-with-children {
+    margin-bottom: 2rem;
+  }
+  
+  .title-align-left {
+    text-align: left;
+  }
+  
+  .title-align-center {
+    text-align: center;
+  }
+  
+  .title-align-right {
+    text-align: right;
+  }
+  
+  @media screen and (max-width: 800px) {
+    
+  
+    .narrow {
+      width: var(--pc-main-width-narrow);
+    }
+  }
+  
+  @media screen and (max-width: 512px) {
+    .narrow {
+      width: calc(100vw - 1rem);
+    }
+  }
+  

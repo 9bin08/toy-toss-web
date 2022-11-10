@@ -1,0 +1,32 @@
+
+  .navigation-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background-color: var(--black-002);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .menu{
+      padding: 0.5rem 1rem;
+      border-top: .1rem solid var(--black-006);
+      border-radius: 1.5rem 1.5rem 0 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: var(--black-002);
+      color: var(--white);
+      
+  }
+
+  .list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+  }
+  .list > img {
+      margin-bottom: .5rem;
+  }
