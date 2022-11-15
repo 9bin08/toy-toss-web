@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../../components/@common/Container/Container";
+import SkeletonLoader from "../../components/@common/SkeletonLoader/SkeletonLoader";
 import useModalContext from "../../hooks/useModalContext";
 import styles from "./Home.module.css";
 
 const Home = () => {
   const { Modal, openModal } = useModalContext();
-
+  const { isLoading, setIsLoading } = useState(true);
   const HomeMenuSectionArea = [
     {
       id: 1,
@@ -31,25 +32,30 @@ const Home = () => {
   ];
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    console.log(document.body);
     openModal();
   };
 
   return (
     <>
-      <Container>
-        {HomeMenuSectionArea.map((menu) => (
-          <div className={styles["home-container"]}>
-            <h2>{menu.title}</h2>
-            <ul>
-              {menu.innerContents.map((list) => (
-                <li>{list.contentTitle}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </Container>
-
+      {isLoading ? (
+        <SkeletonLoader children={<div>asd</div>} />
+      ) : (
+        <>
+          <Container title="Home">
+            {HomeMenuSectionArea.map((menu) => (
+              <div className={styles["home-container"]}>
+                <h2 onClick={handleSubmit}>{menu.title}</h2>
+                <ul>
+                  {menu.innerContents.map((list) => (
+                    <li>{list.contentTitle}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </Container>
+        </>
+      )}
       <Modal>
         <p>
           "국가는 과학기술의 혁신과 정보 및 인력의 개발을 통하여 국민경제의 발전에 노력하여야 한다.

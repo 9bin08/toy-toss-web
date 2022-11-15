@@ -19,26 +19,31 @@ const Navigation = () => {
       id: 1,
       tabTitle: "홈",
       tabIconImage: HomeIconImage,
+      path: "/",
     },
     {
       id: 2,
       tabTitle: "헤택",
       tabIconImage: HomeIconImage,
+      path: "/event",
     },
     {
       id: 3,
       tabTitle: "송금",
       tabIconImage: HomeIconImage,
+      path: "/payment",
     },
     {
       id: 4,
       tabTitle: "주식",
       tabIconImage: HomeIconImage,
+      path: "/stock",
     },
     {
       id: 5,
       tabTitle: "전체",
       tabIconImage: HomeIconImage,
+      path: "/all",
     },
   ];
 
@@ -46,10 +51,12 @@ const Navigation = () => {
     <div className={styles["navigation-container"]}>
       <ul className={styles.menu}>
         {NavigationMenuList.map((tab) => (
-          <li className={styles.list}>
-            <Icon src={tab.tabIconImage} alt="네비게이션 이미지" />
-            <span>{tab.tabTitle}</span>
-          </li>
+          <Link to={tab.path}>
+            <li className={styles.list} key={tab.path}>
+              <Icon src={tab.tabIconImage} alt="네비게이션 이미지" />
+              <span>{tab.tabTitle}</span>
+            </li>
+          </Link>
         ))}
       </ul>
     </div>
