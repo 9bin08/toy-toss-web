@@ -4,7 +4,7 @@
 :root {
   --pc-main-width: 800px;
   --pc-main-width-narrow: 512px;
-
+  
   --modal-window-z-index: 1000;
   --modal-portal-z-index: 990;
   --tooltip-z-index: 980;
