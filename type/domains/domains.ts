@@ -12,6 +12,7 @@ export type UpdatesResponseData = ResponseDataWithMessage<{
      non_withdrawal_time: string 
 }>;
 
+
 //users
 export type User = {
      uid : string;

@@ -19,7 +19,7 @@ class AppRoutes extends React.Component {
             <ModalProvider>
               <main>
                 <Routes>
-                  <Route path="/" element={<Home />} />
+                  <Route path="/home" element={<Home />} />
                   <Route path="/event" element={<Event />} />
                   <Route path="/payment" element={<Payment />} />
                   <Route path="/stock" element={<Stock />} />

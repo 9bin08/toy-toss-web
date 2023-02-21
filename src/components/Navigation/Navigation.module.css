@@ -18,15 +18,5 @@
       justify-content: space-around;
       background-color: var(--black-002);
       color: var(--white);
-      
   }
 
-  .list{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-  }
-  .list > img {
-      margin-bottom: .5rem;
-  }
