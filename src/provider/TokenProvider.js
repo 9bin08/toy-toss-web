@@ -9,9 +9,6 @@ const TokenProvider = ({ children }) => {
   );
 
   const postRegister = async (payload) => {
-    // const { data: token } = await Api.fetchRegister(payload);
-    const { data: token } = null;
-
     setToken(token);
     localStorage.setItem(LOCAL_STORAGE_KEY.ACCESS_TOKEN, token);
   };

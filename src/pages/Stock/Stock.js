@@ -8,7 +8,7 @@ const Stock = () => {
 
   useEffect(() => {
     // fetchUpbitMarketCoinList();
-    openWebSocketToUpbit("BTC");
+    // openWebSocketToUpbit("BTC");
   }, []);
 
   return (

@@ -8,17 +8,9 @@ export const ERROR_MESSAGE = {
       PHONE_NUMBER: "정확한 전화번호를 입력해 주세요. ex) 010-1234-5678",
       REQUIRED: "필수 정보입니다.",
       URL: "http(s)를 포함한 정확한 URL을 입력해 주세요.",
-      TIMEOUT_EMAIL_AUTHENTICATION_CODE:
-        "이메일 인증 코드 유효시간이 초과하였습니다. 이메일 인증 코드를 재발급해 주세요.",
-      PULL_REQUEST_URL:
-        "정확한 Pull Request 주소를 입력해 주세요. ex) https://github.com/woowacourse/java-baseball/pull/1",
-      GITHUB_USERNAME: "GitHub ID는 영어와 숫자 문자만 입력할 수 있습니다.",
       BIRTHDAY: "유효하지 않은 날짜입니다. 정확한 날짜를 입력해 주세요.",
     },
     API: {
-      ALREADY_REGISTER: "이미 지원한 이력이 있습니다.",
-      FETCHING_MY_APPLICATIONS: "내 지원 정보를 불러올 수 없습니다.",
-      FETCHING_MY_APPLICATION: "내 지원서를 불러올 수 없습니다.",
       JOIN_FAILURE: "회원가입에 실패했습니다. 잠시 후 다시 시도해 주세요.",
       LOGIN_FAILURE: "아이디(E-mail) 또는 비밀번호를 확인해 주세요.",
       EDIT_FAILURE: "변경에 실패했습니다. 잠시 후 다시 시도해 주세요.",
@@ -36,33 +28,17 @@ export const ERROR_MESSAGE = {
       REQUIRED_LOGIN: "로그인이 필요합니다.",
     },
     HOOKS: {
+      CAANOT_FIND_SERVICE_CONTEXT : 'ServiceContext가 존재하지 않습니다.',
       CANNOT_FIND_FORM_CONTEXT: "FormContext가 존재하지 않습니다.",
-      CANNOT_FIND_RECRUITMENT_CONTEXT: "recruitmentContext가 존재하지 않습니다",
       CANNOT_FIND_TOKEN_CONTEXT: "TokenContext가 존재하지 않습니다",
-      CANNOT_FIND_USER_INFO_CONTEXT: "UserInfoContext가 존재하지 않습니다",
       CANNOT_FIND_MODAL_CONTEXT: "ModalContext가 존재하지 않습니다",
     },
   } as const;
   
   export const SUCCESS_MESSAGE = {
     API: {
-      CHANGE_PASSWORD: "비밀번호가 변경되었습니다. 다시 로그인해 주세요.",
-      SUBMIT_APPLICATION: "정상적으로 제출되었습니다.",
-      SUBMIT_ASSIGNMENT: "정상적으로 제출되었습니다.",
-      SAVE_APPLICATION: "정상적으로 저장되었습니다.",
-      EDIT_MY_PAGE: "정상적으로 변경되었습니다.",
     },
   } as const;
-  
-  export const CONFIRM_MESSAGE = {
-    RESET_APPLICATION: "정말 초기화하시겠습니까?",
-    CANCEL_ASSIGNMENT_SUBMIT: "정말 취소하시겠습니까? 작성하신 내용이 저장되지 않습니다.",
-  } as const;
-  
-  export const MY_MISSION_TOOLTIP_MESSAGE = [
-    "예제 테스트 성적은 실제 성적과 무관합니다.",
-    "제출 마감 후에는 예제 테스트를 실행할 수 없습니다.",
-    "예제 테스트를 실행하지 않아도 제출된 Pull Request를 기반으로 채점을 진행합니다.",
-    "과제 제출을 해야 예제 테스트를 실행할 수 있습니다.",
-  ] as const;
+
+ 
   
